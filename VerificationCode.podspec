@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/oneofai/VerificationCode.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/oneofai/VerificationCode.git", :tag => s.version }
   s.ios.deployment_target = '10.0'
   s.default_subspec  = "Core"
 
@@ -94,15 +94,15 @@ Pod::Spec.new do |s|
 
   
   s.subspec "Core" do |ss|
-    ss.source_files  = "Source/VerificationCode/"
-    ss.framework     = "UIKit"
+    ss.source_files  = 'Source/'
+    ss.framework     = 'UIKit'
   end
 
   s.subspec "RxSwift" do |ss|
-    ss.source_files = "Source/RxSwift/"
-    ss.dependency "VerificationCode/Core"
-    ss.dependency "RxSwift"
-    ss.dependency "RxCocoa"
+    ss.source_files = 'Source/'
+    ss.dependency 'VerificationCode/Core'
+    ss.dependency 'RxSwift'
+    ss.dependency 'RxCocoa'
   end
 
   # s.public_header_files = "Classes/**/*.h"
