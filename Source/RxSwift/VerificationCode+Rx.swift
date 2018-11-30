@@ -13,7 +13,7 @@ import RxCocoa
 
 public extension Reactive where Base: VerificationCode {
     
-    /// Reactive wrapper for `code` property.
+    /// Reactive wrapper for `text` property.
     public var text : ControlProperty<String?> {
         return controlProperty(editingEvents: [.allEditingEvents, .valueChanged],
                                getter: { codeView in
