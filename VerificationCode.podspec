@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Sun" => "holaux@gmail.com" }
-  s.source       = { :git => "https://github.com/oneofai/VerificationCode.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/oneofai/VerificationCode.git" }
   # s.ios.deployment_target = '10.0'
   s.platform     = :ios, "10.0"
   s.default_subspec  = "Core"
