@@ -22,11 +22,11 @@ Pod::Spec.new do |s|
     core.framework     = "UIKit"
   end
 
-  s.subspec "Rx" do |rx|
-    rx.source_files = "Source/RxSwift/*"
-    rx.dependency 'VerificationCode/Core'
-    rx.dependency 'RxSwift'
-    rx.dependency 'RxCocoa'
-  end
+  # s.subspec "Rx" do |rx|
+  #   rx.source_files = "Source/RxSwift/*"
+  #   rx.dependency 'VerificationCode/Core'
+  #   rx.dependency 'RxSwift'
+  #   rx.dependency 'RxCocoa'
+  # end
 
 end
