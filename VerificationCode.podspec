@@ -1,15 +1,9 @@
 Pod::Spec.new do |s|
 
-  s.name         = "VerificationCode"
-  s.version      = "0.0.1"
+  s.name         = "MFVerificationCode"
+  s.version      = "1.0.0"
   s.swift_version= "4.2" 
   s.summary      = "VerificationCode is a sample and easy phone auth UI Component."
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
   VerificationCode is a mobile phone auth UI Component with underlines for each character placeholder.
                    DESC
