@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable open class VerificationCode: UIView {
+@IBDesignable open class VerificationCode: UIControl {
     public weak var delegate: VerificationCodeProtocol?
     
     @IBInspectable public var itemWidth: CGFloat                = 40
