@@ -2,6 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "VerificationCode"
   s.version      = "0.0.1"
+  s.swift_version= "4.2" 
   s.summary      = "VerificationCode is a sample and easy phone auth UI Component."
 
   # This description is used to generate tags and improve search results.
@@ -17,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Sun" => "holaux@gmail.com" }
-  s.source       = { :git => "https://github.com/oneofai/VerificationCode.git" }
+  s.source       = { :git => "https://github.com/oneofai/VerificationCode.git", :tag => s.version}
   # s.ios.deployment_target = '10.0'
   s.platform     = :ios, "10.0"
   s.default_subspec  = "Core"
