@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.subspec "Rx" do |rx|
     rx.source_files = "Source/RxSwift/*"
-    rx.dependency 'MFVerificationCode/Core'
+    rx.dependency 'VerificationCode/Core'
     rx.dependency 'RxSwift'
     rx.dependency 'RxCocoa'
   end
