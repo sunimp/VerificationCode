@@ -13,7 +13,7 @@ import UIKit
     
     @IBInspectable public var itemWidth: CGFloat                = 40
     @IBInspectable public var itemHorizontalSpacing: CGFloat    = 10
-    @IBInspectable public var underlineVerticalSpacing: CGFloat = 6
+    @IBInspectable public var underlineVerticalSpacing: CGFloat = 8
     @IBInspectable public var numel: Int                        = 4
     @IBInspectable public var underlineHeight: CGFloat          = 3
     @IBInspectable public var placeholderText: String?

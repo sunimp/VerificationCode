@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4112" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,12 +14,16 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MFVerficationCodeExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4AZ-xL-ryh"/>
+                        <viewControllerLayoutGuide type="bottom" id="jLi-LV-vk0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbw-mr-mal" customClass="VerificationCode" customModule="MFVerificationCode">
-                                <rect key="frame" x="0.0" y="40" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="64"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="aaN-Nb-IPd"/>
@@ -29,21 +33,26 @@
                                         <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                        <real key="value" value="28"/>
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="itemWidth">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="underlineHeight">
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-0L-iOy">
-                                <rect key="frame" x="127.5" y="607" width="120" height="40"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-0L-iOy">
+                                <rect key="frame" x="127.5" y="323.5" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3ZT-xK-XkZ"/>
-                                    <constraint firstAttribute="width" constant="120" id="K77-Mm-k1d"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="K77-Mm-k1d"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <state key="normal" title="Checking">
+                                <state key="normal" title="Check">
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="disabled" title="Check"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
@@ -53,18 +62,25 @@
                                     <action selector="checking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J36-Ck-SxY"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2vl-Wp-rdM">
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7pf-0L-iOy" firstAttribute="centerY" secondItem="MMn-JE-mgy" secondAttribute="centerY" id="CHa-aE-6P4"/>
                             <constraint firstItem="bbw-mr-mal" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="D5p-9X-Fvm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7pf-0L-iOy" secondAttribute="bottom" constant="20" id="PYU-mn-fCG"/>
-                            <constraint firstItem="bbw-mr-mal" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jNW-z2-R5C"/>
-                            <constraint firstItem="7pf-0L-iOy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nwK-tg-BPC"/>
-                            <constraint firstItem="bbw-mr-mal" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p51-Qi-WQH"/>
+                            <constraint firstItem="2vl-Wp-rdM" firstAttribute="centerY" secondItem="7pf-0L-iOy" secondAttribute="centerY" id="cDp-vJ-MRp"/>
+                            <constraint firstItem="2vl-Wp-rdM" firstAttribute="centerX" secondItem="7pf-0L-iOy" secondAttribute="centerX" id="eot-N1-KgV"/>
+                            <constraint firstItem="bbw-mr-mal" firstAttribute="top" secondItem="4AZ-xL-ryh" secondAttribute="bottom" constant="64" id="jNW-z2-R5C"/>
+                            <constraint firstItem="7pf-0L-iOy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nwK-tg-BPC"/>
+                            <constraint firstItem="bbw-mr-mal" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p51-Qi-WQH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="MMn-JE-mgy"/>
                     </view>
                     <connections>
+                        <outlet property="activityView" destination="2vl-Wp-rdM" id="bWv-vZ-Ccm"/>
+                        <outlet property="checkingButton" destination="7pf-0L-iOy" id="UTR-55-iZg"/>
                         <outlet property="verificationCodeView" destination="bbw-mr-mal" id="i7H-Mp-yE7"/>
                     </connections>
                 </viewController>
