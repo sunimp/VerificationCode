@@ -13,9 +13,9 @@ import UIKit
     
     @IBInspectable public var itemWidth: CGFloat                = 40
     @IBInspectable public var itemHorizontalSpacing: CGFloat    = 10
-    @IBInspectable public var underlineVerticalSpacing: CGFloat = 0
-    @IBInspectable public var numel: Int                        = 5
-    @IBInspectable public var underlineHeight: CGFloat          = 3
+    @IBInspectable public var underlineVerticalSpacing: CGFloat = 4
+    @IBInspectable public var numel: Int                        = 4
+    @IBInspectable public var underlineHeight: CGFloat          = 2
     @IBInspectable public var placeholderText: String?
     @IBInspectable public var text: String? {
         didSet {
@@ -23,7 +23,7 @@ import UIKit
         }
     }
     
-    @IBInspectable public var fontSize: CGFloat = 14 {
+    @IBInspectable public var fontSize: CGFloat = 18 {
         didSet {
             font = font.withSize(fontSize)
         }
@@ -33,7 +33,7 @@ import UIKit
     @IBInspectable public var placeholderColor: UIColor           = .lightGray
     @IBInspectable public var underlineColor: UIColor             = .black
     @IBInspectable public var updatedUnderlineColor: UIColor      = .lightGray
-    @IBInspectable public var secureEntry: Bool                    = false
+    @IBInspectable public var secureEntry: Bool                   = false
     @IBInspectable public var needToUpdateUnderlines: Bool        = true
     @IBInspectable public var codeBackgroundColor: UIColor        = .clear
     @IBInspectable public var codeBackgroundCornerRadius: CGFloat = 0
@@ -41,7 +41,7 @@ import UIKit
     public var keyboardType: UIKeyboardType                 = .numberPad
     public var keyboardAppearance: UIKeyboardAppearance     = .default
     public var autocorrectionType: UITextAutocorrectionType = .no
-    public var font: UIFont                                 = .systemFont(ofSize: 14)
+    public var font: UIFont                                 = .systemFont(ofSize: 18)
     public var allowedCharacterSet: CharacterSet            = .alphanumerics
 
     private var _inputView: UIView?
