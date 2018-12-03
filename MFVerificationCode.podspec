@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MFVerificationCode"
-  s.version      = "1.1.0"
+  s.version      = "1.2.0"
   s.swift_version= "4.2" 
   s.summary      = "VerificationCode is a sample and easy phone auth UI Component."
   s.description  = <<-DESC
@@ -22,11 +22,11 @@ Pod::Spec.new do |s|
     core.framework     = "UIKit"
   end
 
-  # s.subspec "Rx" do |rx|
-  #   rx.source_files = "Source/RxSwift/*"
-  #   rx.dependency 'MFVerificationCode/Core'
-  #   rx.dependency 'RxSwift'
-  #   rx.dependency 'RxCocoa'
-  # end
+   s.subspec "Rx" do |rx|
+     rx.source_files = "Source/Rx/*"
+     rx.dependency 'MFVerificationCode/Core'
+     rx.dependency 'RxSwift'
+     rx.dependency 'RxCocoa'
+   end
 
 end
