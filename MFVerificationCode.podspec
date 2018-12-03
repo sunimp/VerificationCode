@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MFVerificationCode"
-  s.version      = "1.2.1"
+  s.version      = "1.3.0"
   s.swift_version= "4.2" 
   s.summary      = "VerificationCode is a sample and easy phone auth UI Component."
   s.description  = <<-DESC
@@ -13,20 +13,8 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Sun" => "holaux@gmail.com" }
   s.source       = { :git => "https://github.com/oneofai/VerificationCode.git", :tag => s.version}
-  # s.ios.deployment_target = '10.0'
-  s.platform     = :ios, "10.0"
-  s.default_subspec  = "Core"
-  
-  s.subspec "Core" do |core|
-    core.source_files  = "Source/VerificationCode/*"
-    core.framework     = "UIKit"
-  end
+  s.ios.deployment_target = '10.0'
 
-   s.subspec "Rx" do |rx|
-     rx.source_files = "Source/Rx/*"
-     rx.dependency 'MFVerificationCode/Core'
-     rx.dependency 'RxSwift'
-     rx.dependency 'RxCocoa'
-   end
-
+  s.source_files  = "Source/VerificationCode/*"
+  s.framework     = "UIKit"
 end
