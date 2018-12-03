@@ -23,7 +23,7 @@ import UIKit
         }
     }
     
-    @IBInspectable public var fontSize: CGFloat = 18 {
+    @IBInspectable public var fontSize: CGFloat = 20 {
         didSet {
             font = font.withSize(fontSize)
         }
@@ -41,7 +41,7 @@ import UIKit
     public var keyboardType: UIKeyboardType                 = .numberPad
     public var keyboardAppearance: UIKeyboardAppearance     = .default
     public var autocorrectionType: UITextAutocorrectionType = .no
-    public var font: UIFont                                 = .systemFont(ofSize: 18)
+    public var font: UIFont                                 = .systemFont(ofSize: 20, weight: .medium)
     public var allowedCharacterSet: CharacterSet            = .alphanumerics
 
     private var _inputView: UIView?
