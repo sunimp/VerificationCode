@@ -49,29 +49,19 @@ class ViewController: UIViewController {
 extension ViewController: VerificationCodeProtocol {
     func textFieldValueChanged(_ textField: VerificationCode) {
         
-        if textField.text?.count == textField.numel {
-            checkingButton.isEnabled = true
-            checkingButton.backgroundColor = UIColor(red: 0.972, green: 0.345, blue: 0.345, alpha: 1.0)
-        } else if textField.text?.count == 0 {
+        guard let count = textField.text?.count, count != 0 else {
+            textField.resignFirstResponder()
+            return
+        }
+        
+        if count < textField.numel {
             checkingButton.isEnabled = false
             checkingButton.setTitle("Check", for: .disabled)
             checkingButton.backgroundColor = UIColor(red: 0.543, green: 0.345, blue: 0.345, alpha: 1.0)
-            textField.resignFirstResponder()
+        } else {
+            checkingButton.isEnabled = true
+            checkingButton.backgroundColor = UIColor(red: 0.972, green: 0.345, blue: 0.345, alpha: 1.0)
+            
         }
-    }
-}
-
-
-extension UIImage {
-    
-    static func from(color: UIColor, size: CGSize) -> UIImage {
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContext(size)
-        let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(color.cgColor)
-        context!.fill(rect)
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return img!
     }
 }
