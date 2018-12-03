@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MFVerificationCode"
-  s.version      = "1.3.1"
+  s.version      = "1.3.2"
   s.summary      = "VerificationCode is a sample and easy phone auth UI Component."
   s.description  = <<-DESC
   VerificationCode is a mobile phone auth UI Component with underlines for each character placeholder.
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Sun" => "holaux@gmail.com" }
   s.source       = { :git => "https://github.com/oneofai/VerificationCode.git", :tag => s.version}
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files  = "Source/VerificationCode/*"
   s.framework     = "UIKit"
