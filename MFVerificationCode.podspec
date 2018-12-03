@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MFVerificationCode"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.swift_version= "4.2" 
   s.summary      = "VerificationCode is a sample and easy phone auth UI Component."
   s.description  = <<-DESC
